@@ -1,2 +1,5 @@
 requests
 markdown2
+
+# For testing (optional):
+# pytest
