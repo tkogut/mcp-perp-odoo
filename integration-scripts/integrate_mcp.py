@@ -464,7 +464,7 @@ class MCPIntegrator:
 
         # Environment for Perplexity
         self.perplexity_env = os.environ.copy()
-        self.perplexity_env["PERPLEXITY_API_KEY"] = os.getenv("PERPLEXITY_API_KEY", "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")
+        self.perplexity_env["PERPLEXITY_API_KEY"] = os.getenv("PERPLEXITY_API_KEY", "default_perplexity_key")
 
     async def query_perplexity_direct(self, question: str) -> Dict[str, Any]:
         """Query Perplexity API directly."""
