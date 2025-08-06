@@ -212,7 +212,10 @@ class IntelligentPerplexityOdooAgent:
         """
         
         response = await self.perplexity.query_perplexity_direct(synthesis_prompt)
-        return response['data']
+        if response.get('success') and 'data' in response:
+            return response['data']
+        else:
+            return f"Błąd pobierania danych z Perplexity: {response.get('error', 'Nieznany błąd')}"
     
     def prepare_data_summary(self, all_data: Dict[str, Any]) -> str:
         """Przygotowuje strukturalne podsumowanie danych"""
