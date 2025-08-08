@@ -307,7 +307,7 @@ async def main():
     
     # Przykładowe pytania biznesowe
     questions = [
-        "Jaki był obrót MIW Group w Q2 2025?"
+        "ile firm ma odoo (res.company)"
     ]
     
     for question in questions:
